@@ -1,21 +1,17 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import { Register } from './pages/Register'
-import { Login } from './pages/Login'
+import { Login } from './pages/Login/Login'
+import { Home } from './pages/Home/Home'
+import { Signup } from './pages/Signup/Signup'
 import './App.css'
 
 function App() {
 
   return (
-    <>
-      <BrowserRouter >
-        <Routes>
-          <Route path='/signup' element={<Register />} />
-          <Route path='/signin' element={<Login />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+    <div className='p-4 h-screen flex items-center justify-center'>
+      <Signup />
+    </div>
+  );
 }
 
 export default App
